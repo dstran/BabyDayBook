@@ -1,0 +1,40 @@
+<div id="target">
+    <table class="table table-striped">
+        <thead ng-show="searchCtrl.results.length > 0">
+            <tr>
+                <th>Time</th>
+                <th>Type</th>
+                <th class="success">Notes</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="item in searchCtrl.results | limitTo: 5">
+                <td>{{ item | time}}</td>
+                <td>{{ item.type }}, {{ item.title }}</td>
+                <td class="success">{{ item.notes }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<a class="btn btn-default" data-toggle="collapse" href="#collapseSearchResults" aria-expanded="false" aria-controls="collapseContent" onClick="toggler('target');">View All &raquo;</a>
+<!-- Use the 'in' class to have it open by default -->
+<div class="collapse" id="collapseSearchResults">
+    <div class="well">
+        <table class="table table-striped">
+            <thead ng-show="searchCtrl.results.length > 0">
+                <tr>
+                    <th>Time</th>
+                    <th>Type</th>
+                    <th class="success">Notes</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in searchCtrl.results">
+                    <td>{{ item | time }}</td>
+                    <td>{{ item.type }}, {{ item.title }}</td>
+                    <td class="success">{{ item.notes }}</td>
+                </tr>
+            </tbody>
+         </table>
+    </div>
+</div>

@@ -1,0 +1,62 @@
+<a class="btn btn-primary" data-toggle="collapse" href="#collapseContent" aria-expanded="false" aria-controls="collapseContent">Enter Checkup &raquo;</a>
+<div class="collapse" id="collapseContent">
+    <div class="well">
+        <form name="addCheckupResultsForm"  ng-submit="addCheckupResultsForm.$valid && summaryCtrl.addCheckupResults(summaryCtrl.entries)" novalidate>
+            <div class="form-group">
+                <table>
+                    <tr>
+                        <td>
+                            <label for="weightInput">Weight</label>
+                            <div class="input-group">
+                                <input ng-model="summaryCtrl.entry.weight" type="number" class="form-control" id="weightInput" placeholder="Enter weight" required>
+                                <div class="input-group-addon">ounces</div>
+                            </div>
+                        </td>
+                        <td>
+                            <label for="weightPercentInput">Percentage</label>
+                            <div class="input-group">
+                                <input ng-model="summaryCtrl.entry.weight_percent" type="number" class="form-control" id="weightPercentInput" placeholder="Enter percentage" required>
+                                <div class="input-group-addon">%</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="heightInput">Height</label>
+                            <div class="input-group">
+                                <input ng-model="summaryCtrl.entry.height" type="number" class="form-control" id="heightInput" placeholder="Enter height" required>
+                                <div class="input-group-addon">inches</div>
+                            </div>
+                        </td>
+                        <td>
+                            <label for="heightPercentageInput">Percentage</label>
+                            <div class="input-group">
+                                <input ng-model="summaryCtrl.entry.height_percent" type="number" class="form-control" id="heightPercentageInput" placeholder="Enter percentage" required>
+                                <div class="input-group-addon">%</div>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="headCirInput">Head Circumference</label>
+                            <div class="input-group">
+                                <input ng-model="summaryCtrl.entry.head_cir" type="number" class="form-control" id="headCirInput" placeholder="Enter head circum." required>
+                                <div class="input-group-addon">inches</div>
+                            </div>
+                        </td>
+                        <td>
+                            <label for="headCirPercentageInput">Percentage</label>
+                            <div class="input-group">
+                                <input ng-model="summaryCtrl.entry.head_cir_percent" type="number" class="form-control" id="headCirPercentageInput" placeholder="Enter percentage" required>
+                                <div class="input-group-addon">%</div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+                <label for="notesInput">Notes</label>
+                <input ng-model="summaryCtrl.entry.notes" type="text" class="form-control" placeholder="Enter notes" required>
+            </div>
+            <button type="submit" class="btn btn-default">Add checkup results</button>
+        </form>
+    </div>
+</div>

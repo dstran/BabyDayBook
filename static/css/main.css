@@ -1,0 +1,44 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+.bg {
+    background: url('/static/img/main.jpg') no-repeat center center;
+    position: fixed;
+    width: 100%;
+    height: 400px; /*same height as jumbotron */
+    top:0;
+    left:0;
+    z-index: -1;
+    background-size: cover;
+}
+
+.jumbotron {
+    margin-bottom: 0px;
+    height: 400px;
+    /*color: #2b542c;
+    text-shadow: black 0.3em 0.3em 0.3em;*/
+    background:transparent;
+}
+
+.ng-invalid.ng-dirty {
+    border-color: red;
+}
+
+.ng-valid.ng-dirty {
+    border-color: green;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,18 @@
+<table class="table table-striped">
+  <thead>
+      <tr>
+          <th>Weight</th>
+          <th>Height</th>
+          <th>Head Circumference</th>
+          <th class="success">Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr ng-repeat="entry in summaryCtrl.entries">
+          <td>{{entry.weight | weight}} ({{ entry.weight_percent | percent }})</td>
+          <td>{{entry.height | height}} ({{ entry.height_percent | percent }})</td>
+          <td>{{entry.head_cir | height}}  ({{ entry.head_cir_percent | percent }})</td>
+          <td class="success">{{ entry.notes }}</td>
+      </tr>
+  </tbody>
+</table>
